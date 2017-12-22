@@ -12,12 +12,12 @@ def set_color():
     red = data["red"]
     green = data["green"]
     blue = data["blue"]
+    led = data["led"]
 
-    for led in range(0, 8):
-        set_pixel(led, int(red), int(green), int(blue))
+    set_pixel(led, int(red), int(green), int(blue))
     show()
 
-    return json.dumps({"status": "OK", "r": red, "g": green, "b": blue })
+    return json.dumps({"status": "OK", "r": red, "g": green, "b": blue, "led": led})
 
 if __name__ == '__main__':
     app.run(debug=False, host='0.0.0.0')
