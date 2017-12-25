@@ -20,5 +20,7 @@ spec:
       containers:
       - name: http-blinkt
         image: furikuri/http-blinkt
+        ports:
+          - containerPort: 5000
         securityContext:
           privileged: true
